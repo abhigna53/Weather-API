@@ -20,6 +20,10 @@ describe("Server", () => {
         it("Status 200", () => {
             expect(data.status).toBe(200);
         });
+	it("Body", () => {
+	    let weat = JSON.parse(data.body)
+            expect(weat[0].weather.name).toBe(“Boston”);
+        });
     });
 
 });
